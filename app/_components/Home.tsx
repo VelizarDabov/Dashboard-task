@@ -26,7 +26,7 @@ const HomePage = () => {
     </p>
     
     <SignedIn>
-          <Link href={"/dashboardTest"}>
+          <Link href={"/dashboard"}>
             <Button className='backgroun-white'>Dashboard</Button>
           </Link>
         </SignedIn>

@@ -12,7 +12,7 @@ const DashboardHeader = () => {
             <ComboboxDemo/>
         </div>
 
-        <div className=' hidden md:flex gap-2'>
+        <div className=' hidden text-xs md:text-md  lg:text-lg md:flex gap-2'>
             {headerTitle.map((title)=> (
                 <Link href={title.path} key={title.id}>
                     <h1 className='text-gray-500 hover:text-white'>{title.title}</h1></Link>

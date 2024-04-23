@@ -3,6 +3,10 @@ import React from 'react'
 import DashboardHeader from './_components/DashboardHeader'
 import DashboardMiddle from './_components/DashboardMiddle'
 import MenuBar from './_components/MenuBar'
+import { cardInfo } from './_constants'
+import DashboardCard from './_components/DashboardCard'
+import DashboardSales from './_components/DashboardSales'
+
 
 const Dashboard = () => {
   return (
@@ -20,6 +24,16 @@ const Dashboard = () => {
          <DashboardHeader />
          <DashboardMiddle/>
          <MenuBar />
+         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5 mx-5'>
+         {cardInfo.map((item) => (
+          
+             <DashboardCard key={item.id} icon={item.icon} comparison={item.comparison} amount={item.amount} title={item.title} id={item.id} />
+            
+         
+         ))}
+         </div>
+         <DashboardSales />
+       
         </div>
     </div>
 
