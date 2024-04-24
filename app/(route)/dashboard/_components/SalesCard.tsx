@@ -1,6 +1,4 @@
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
-import Image from 'next/image'
-import React from 'react'
 interface SalesProps{
     avatar:any, 
     name:string,
@@ -9,7 +7,7 @@ interface SalesProps{
 }
 const SalesCard = ({avatar, name, email, money}:SalesProps) => {
   return (
-    <div className='flex items-center justify-between mx-5'>
+    <div className='flex items-center justify-between mx-5 hover:scale-105'>
         <div className='flex flex-row py-3 items-center'>
             <Avatar className='w-10 h-10  mr-3'>
             <AvatarImage src="https://github.com/shadcn.png" />
@@ -17,7 +15,7 @@ const SalesCard = ({avatar, name, email, money}:SalesProps) => {
             
             <div className='grid grid-cols-1'>
                 <h3 className='text-white'>{name}</h3>
-                <p className='text-gray-500'>{email}</p>
+                <p className='text-gray-500 text-xs'>{email}</p>
             </div>
         </div>
         <div className=''>

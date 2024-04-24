@@ -6,6 +6,10 @@ import MenuBar from './_components/MenuBar'
 import { cardInfo } from './_constants'
 import DashboardCard from './_components/DashboardCard'
 import DashboardSales from './_components/DashboardSales'
+import DashboardBarChart from './_components/DashboardBarChart'
+import DashboardFooter from './_components/DashboardFooter'
+import Link from 'next/link'
+import { SignOutButton } from '@clerk/nextjs'
 
 
 const Dashboard = () => {
@@ -14,9 +18,18 @@ const Dashboard = () => {
         <div className='flex flex-col  items-center mt-10'>
         <h1 className='text-bold text-white text-4xl'>Check out some examples</h1>
         <p className='text-gray-200 text-lg text-center mx-5 lg:mx-10 mt-5'>Dashboard, cards, authentication. Some examples built using the components. Use this as a guide to build your own.</p>
-        <div className=' flex justify-between mt-7'>
-          <Button className='mr-5'>Get Started</Button>
+        <div className=' flex items-center gap-5 mt-7'>
+          <Link href={'#dashboard'}>
+          <Button>Get Started</Button>
+          </Link>
+          
           <Button variant="ghost" className='text-white'>Components</Button>
+          <Link href={'/'}>
+          <Button>
+<SignOutButton />
+</Button>
+          </Link>
+       
         </div>
        
         </div>
@@ -32,8 +45,12 @@ const Dashboard = () => {
          
          ))}
          </div>
+         <div className='mx-5 mt-5 flex flex-col md:flex-row'>
+         <DashboardBarChart />
          <DashboardSales />
-       
+         </div>
+    
+     <DashboardFooter />
         </div>
     </div>
 
