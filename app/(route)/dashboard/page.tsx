@@ -9,10 +9,12 @@ import DashboardSales from './_components/DashboardSales'
 import DashboardBarChart from './_components/DashboardBarChart'
 import DashboardFooter from './_components/DashboardFooter'
 import Link from 'next/link'
-import { SignOutButton } from '@clerk/nextjs'
+import { SignOutButton, useUser } from '@clerk/nextjs'
 
 
 const Dashboard = () => {
+
+ 
   return (
     <div className=''>
         <div className='flex flex-col  items-center mt-10'>
